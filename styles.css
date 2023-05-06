@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border-right: 3px solid rgba(0, 22, 22, 0.4);
+    height: 100%;
+    z-index: 1;
+}
+
+nav header {
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
+    color: black;
+    font-size: 2rem;
+}
+
+nav li {
+    width: 100%;
+    list-style: none;
+    padding: 2.2rem;
+    border-top: 1px solid rgba(0, 22, 22, 0.4);
+}
+
+nav ul {
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 88%;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4d4e53;
+    cursor: pointer;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+nav ul:last-child {
+    border-bottom: 1px solid rgba(0, 22, 22, 0.4);
+}
+
+#main-doc {
+    margin-left: 300px;
+    position: absolute;
+    z-index: -1;
+    padding: 1.5rem;
+}
+
+section header {
+    font-size: 2rem;
+    color: black;
+}
+
+section li {
+    margin-bottom: 1.5rem;
+}
+
+#main-doc code {
+    display: block;
+    background-color: #f7f7f7;
+    margin: 1rem auto;
+    padding: 2rem;
+    line-height: 1.5rem;
+}
+
+article {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width:815px) {
+    #navbar {
+        position: absolute;
+        width: 96%;
+        height: 300px;
+        border: none;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    #main-doc {
+        width: 96%;
+        margin: 0 auto;
+        position: absolute;
+        top: 340px;
+        overflow: hidden;
+    }
+
+    nav ul {
+        border: 1px solid;
+        height: 250px;
+        margin: auto;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
